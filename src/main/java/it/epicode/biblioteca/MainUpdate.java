@@ -58,5 +58,32 @@ public class MainUpdate {
         nuovaRivista1.setPeriodicita(Rivista.Periodicita.MENSILE);
         catalogoDAO.save(nuovaRivista1);
         System.out.println("Nuova rivista aggiunta: " + nuovaRivista.getTitolo());
+
+        Rivista nuovaRivista2 = new Rivista();
+        nuovaRivista2.setIsbn("23");
+        nuovaRivista2.setTitolo("Horror Weekly");
+        nuovaRivista2.setAnnoPubblicazione(2020);
+        nuovaRivista2.setNumeroPagine(5000);
+        nuovaRivista2.setPeriodicita(Rivista.Periodicita.SETTIMANALE);
+        catalogoDAO.save(nuovaRivista);
+        System.out.println("Nuova rivista aggiunta: " + nuovaRivista.getTitolo());
+
+        Libro libro2 = new Libro();
+        libro2.setIsbn("123");
+        libro2.setTitolo("Spring Programming");
+        libro2.setAnnoPubblicazione(2024);
+        libro2.setNumeroPagine(600);
+        libro2.setAutore("Kate Moss");
+        libro2.setGenere("Informatica");
+        catalogoDAO.save(libro);
+
+        Rivista nuovaRivista3 = new Rivista();
+        nuovaRivista3.setIsbn("3");
+        nuovaRivista3.setTitolo("Weekly");
+        nuovaRivista3.setAnnoPubblicazione(2000);
+        nuovaRivista3.setNumeroPagine(600);
+        nuovaRivista3.setPeriodicita(Rivista.Periodicita.MENSILE);
+        catalogoDAO.save(nuovaRivista1);
+        System.out.println("Nuova rivista aggiunta: " + nuovaRivista.getTitolo());
     }
 }

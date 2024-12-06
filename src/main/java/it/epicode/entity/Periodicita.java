@@ -11,20 +11,14 @@ public class Periodicita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
+    private PeriodicitaTipo tipo;
 
-
-
-
+    private int intervallo;
 
     @Enumerated(EnumType.STRING)
-    private PeriodicitaTipo tipo; // Giornaliera, settimanale, mensile
+    private DayOfWeek giornoSettimana;
 
-    private int intervallo; // Ad esempio, "1" per ogni giorno, ogni settimana, o ogni mese, a seconda del tipo.
-
-    @Enumerated(EnumType.STRING)
-    private DayOfWeek giornoSettimana; // Utilizzato se il tipo è settimanale (es. ogni lunedì)
-
-    // Getter e Setter
     public Long getId() {
         return id;
     }
